@@ -3,7 +3,7 @@
 		{
 			"email": "babadzhanyan@corp.mail.ru",
 			"name": "Vadim Babajanyan",
-			"role": "Lead"
+			"role": "Developer"
 		}
 	],
 	"autoload": {
@@ -18,7 +18,10 @@
 	"license": "BSD",
 	"name": "AKEB/services_json",
 	"support": {
-		"source": "https://github.com/AKEB/Services_JSON"
+		"email": "babadzhanyan@corp.mail.ru",
+		"issues": "https://git.terrhq.ru/v.babajanyan/Services_JSON/issues",
+		"wiki": "https://git.terrhq.ru/v.babajanyan/Services_JSON/wiki/",
+		"source": "https://git.terrhq.ru/v.babajanyan/Services_JSON"
 	},
 	"type": "library",
 	"require": {
