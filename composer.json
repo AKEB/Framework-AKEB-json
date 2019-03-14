@@ -14,7 +14,7 @@
 			"src/JSON.php"
 		]
 	},
-	"description": "More info available on: http://pear.php.net/package/Services_JSON",
+	"description": "",
 	"license": "BSD",
 	"name": "AKEB/services_json",
 	"support": {
@@ -22,10 +22,7 @@
 	},
 	"type": "library",
 	"require": {
-		"php": "^5.4|^7.0",
-		"pear/pear_exception": "*",
-		"pear/pear_error": "*"
-		
+		"php": "^5.4|^7.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "*"
