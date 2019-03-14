@@ -2,6 +2,10 @@
 // $Id$
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
+use \AKEB\services_json\Services_JSON;
+use \AKEB\services_json\Services_JSON_Error;
+
+
 /**
  * Unit tests for Services_JSON.
  * @see JSON.php
