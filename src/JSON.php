@@ -1,6 +1,6 @@
 <?php //$Id:$
 
-use \AKEB\services_json\Services_JSON;
+namespace AKEB\services_json;
 
 if (!function_exists('json_encode')) {
 	function json_encode($arg) {
