@@ -131,19 +131,19 @@ class Services_JSON {
 	 *                                   bubble up with an error, so all return values
 	 *                                   from encode() should be checked with isError()
 	 *                           - SERVICES_JSON_USE_TO_JSON:  call toJSON when serializing objects
-	 *                                   It serializes the return value from the toJSON call rather 
-	 *                                   than the object it'self,  toJSON can return associative arrays, 
+	 *                                   It serializes the return value from the toJSON call rather
+	 *                                   than the object it'self,  toJSON can return associative arrays,
 	 *                                   strings or numbers, if you return an object, make sure it does
 	 *                                   not have a toJSON method, otherwise an error will occur.
 	 */
-	
+
 	 function __construct($use = 0) {
 		$this->use = $use;
 		$this->_mb_strlen            = function_exists('mb_strlen');
 		$this->_mb_convert_encoding  = function_exists('mb_convert_encoding');
 		$this->_mb_substr            = function_exists('mb_substr');
 	}
-	
+
 	// private - cache the mbstring lookup results..
 	var $_mb_strlen = false;
 	var $_mb_substr = false;
@@ -153,7 +153,7 @@ class Services_JSON {
 	var $_tab = '';
 	var $_crlf = '';
 	var $_indent = 0;
-	
+
 	/**
 	 * convert a string from one UTF-16 char to one UTF-8 char
 	 *
@@ -269,7 +269,7 @@ class Services_JSON {
 	 *                           if var is a strng, note that encode() always expects it
 	 *                           to be in ASCII or UTF-8 format!
 	 * @param    mixed   $replacer    NOT SUPPORTED YET.
-	 * @param    number|string   $space 
+	 * @param    number|string   $space
 	 *                           an optional parameter that specifies the indentation
 	 *                           of nested structures. If it is omitted, the text will
 	 *                           be packed without extra whitespace. If it is a number,
@@ -302,7 +302,7 @@ class Services_JSON {
 	 * @access   public
 	 */
 	function encode($var) {
-		header('Content-type: application/json');
+		//header('Content-type: application/json');
 		return $this->encodeUnsafe($var);
 	}
 
@@ -327,7 +327,7 @@ class Services_JSON {
 	}
 
 	/**
-	 * PRIVATE CODE that does the work of encodes an arbitrary variable into JSON format 
+	 * PRIVATE CODE that does the work of encodes an arbitrary variable into JSON format
 	 *
 	 * @param    mixed   $var    any number, boolean, string, array, or object to be encoded.
 	 *                           see argument 1 to Services_JSON() above for array-parsing behavior.
@@ -819,7 +819,7 @@ class Services_JSON {
 							$obj = array();
 						} else {
 							$stk = array(SERVICES_JSON_IN_OBJ);
-							$obj = new stdClass();
+							$obj = new \stdClass();
 						}
 					}
 
@@ -959,9 +959,9 @@ class Services_JSON {
 		}
 	}
 
-	function isError($data, $code = null) {
-		if (is_object($data) && (get_class($data) == 'services_json_error' ||
-			is_subclass_of($data, 'services_json_error'))) {
+	public static function isError($data, $code = null) {
+		if (is_object($data) && (get_class($data) == 'AKEB\services_json\Services_JSON_Error' ||
+			is_subclass_of($data, 'AKEB\services_json\Services_JSON_Error'))) {
 			return true;
 		}
 
@@ -970,7 +970,7 @@ class Services_JSON {
 
 	/**
 	 * Calculates length of string in bytes
-	 * @param string 
+	 * @param string
 	 * @return integer length
 	 */
 	function strlen8($str) {
@@ -982,9 +982,9 @@ class Services_JSON {
 
 	/**
 	 * Returns part of a string, interpreting $start and $length as number of bytes.
-	 * @param string 
-	 * @param integer start 
-	 * @param integer length 
+	 * @param string
+	 * @param integer start
+	 * @param integer length
 	 * @return integer length
 	 */
 	function substr8($string, $start, $length = false) {
