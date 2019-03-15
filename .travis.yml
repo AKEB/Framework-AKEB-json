@@ -1,9 +1,8 @@
 language: php
 
 php:
-  - 5.4.23
-  - 7.1.13
-  - 7.1.15
+  - 5.4
+  - 7.1
 
 before_install:
   - curl -s http://getcomposer.org/installer | php
