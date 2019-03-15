@@ -41,5 +41,6 @@ class Services_JSON_AssocArray_TestCase extends PHPUnit\Framework\TestCase {
 
 		// Test a sparsely populated numerically indexed associative array
 		$this->assertEquals($this->arrs_jo, $this->json_l->encode($this->arrs), "sparse numeric assoc array: {$this->arrs_d}");
+		$this->assertFalse(true);
 	}
 }
