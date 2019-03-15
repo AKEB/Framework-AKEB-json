@@ -1,12 +1,12 @@
 # Services_JSON
 
-composer project AKEB/services_json
+composer project akeb/services_json
 
 Composer config
 ```
 {
 	"require": {
-		"AKEB/services_json": "^1.0.0"
+		"akeb/services_json": "^1.0.0"
 	},
 	"repositories": [
 		{
@@ -22,7 +22,7 @@ or
 ```
 {
 	"require": {
-		"AKEB/services_json": "^1.0.0"
+		"akeb/services_json": "^1.0.0"
 	},
 	"repositories": [
 		{
