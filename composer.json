@@ -16,7 +16,7 @@
 	},
 	"description": "",
 	"license": "BSD",
-	"name": "AKEB/services_json",
+	"name": "akeb/services_json",
 	"support": {
 		"email": "babadzhanyan@corp.mail.ru",
 		"issues": "https://git.terrhq.ru/v.babajanyan/Services_JSON/issues",
