@@ -1,5 +1,6 @@
 # Services_JSON
 
+composer project AKEB/services_json
 
 Composer config
 ```
