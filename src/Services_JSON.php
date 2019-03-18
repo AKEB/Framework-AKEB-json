@@ -1,4 +1,4 @@
-<?php  //$Id:$
+<?php
 
 namespace AKEB\services_json;
 
@@ -48,7 +48,6 @@ namespace AKEB\services_json;
  *
  * @category
  * @package     Services_JSON
- * @version     CVS: $Id:$
  * @license     http://www.opensource.org/licenses/bsd-license.php
  */
 

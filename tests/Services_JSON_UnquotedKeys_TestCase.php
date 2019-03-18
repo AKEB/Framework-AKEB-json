@@ -1,4 +1,4 @@
-<?php  // $Id$
+<?php
 
 use \AKEB\services_json\Services_JSON;
 
