@@ -10,40 +10,21 @@ test:7.0:
   image: php:7.0
   tags:
     - myua
+    - docker
   script:
     - php vendor/bin/phpunit -c phpunit.xml
 
 test:7.1:
   image: php:7.1
-  tags:
-    - myua
   script:
     - php vendor/bin/phpunit -c phpunit.xml
 
 test:7.2:
   image: php:7.2
-  tags:
-    - myua
   script:
     - php vendor/bin/phpunit -c phpunit.xml
 
 test:7.3:
   image: php:7.3
-  tags:
-    - myua
-  script:
-    - php vendor/bin/phpunit -c phpunit.xml
-
-test:7.4:
-  image: php:7.4
-  tags:
-    - myua
-  script:
-    - php vendor/bin/phpunit -c phpunit.xml
-
-test:8.0:
-  image: php:8.0
-  tags:
-    - myua
   script:
     - php vendor/bin/phpunit -c phpunit.xml
