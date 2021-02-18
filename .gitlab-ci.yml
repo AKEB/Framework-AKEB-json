@@ -1,5 +1,7 @@
 before_script:
   - bash ci/docker_install.sh > /dev/null
+  - export https_proxy=http://m100.cache.pvt:3128
+  - export http_proxy=http://m100.cache.pvt:3128
   - curl -s http://getcomposer.org/installer | php
   - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
   - php composer.phar install --prefer-source --no-interaction
