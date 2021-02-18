@@ -15,5 +15,5 @@ before_install:
   - phpenv rehash
 
 script:
-  - php vendor/bin/phpunit -c phpunit.xml
+  - php -n -dzend_extension=xdebug -dxdebug.mode=coverage vendor/bin/phpunit -d xdebug.coverage_enable=1 -c phpunit.xml
 
