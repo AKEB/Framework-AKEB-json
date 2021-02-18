@@ -19,3 +19,18 @@ test:7.2:
   image: php:7.2
   script:
     - php vendor/bin/phpunit -c phpunit.xml
+
+test:7.3:
+  image: php:7.3
+  script:
+    - php vendor/bin/phpunit -c phpunit.xml
+
+test:7.4:
+  image: php:7.4
+  script:
+    - php vendor/bin/phpunit -c phpunit.xml
+
+test:8.0:
+  image: php:8.0
+  script:
+    - php vendor/bin/phpunit -c phpunit.xml
