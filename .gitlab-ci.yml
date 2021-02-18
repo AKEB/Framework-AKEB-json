@@ -1,0 +1,21 @@
+before_script:
+  - bash ci/docker_install.sh > /dev/null
+  - curl -s http://getcomposer.org/installer | php
+  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
+  - php composer.phar install --prefer-source --no-interaction
+  - phpenv rehash
+
+test:7.0:
+  image: php:7.0
+  script:
+    - php vendor/bin/phpunit -c phpunit.xml
+
+test:7.1:
+  image: php:7.1
+  script:
+    - php vendor/bin/phpunit -c phpunit.xml
+
+test:7.2:
+  image: php:7.2
+  script:
+    - php vendor/bin/phpunit -c phpunit.xml
