@@ -5,6 +5,9 @@
 
 set -xe
 
+export https_proxy=http://m100.cache.pvt:3128 
+export http_proxy=http://m100.cache.pvt:3128
+
 # Install git (the php image doesn't have it) which is required by composer
 apt-get update -yqq
 apt-get install git -yqq
