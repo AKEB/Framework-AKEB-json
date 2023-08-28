@@ -3,32 +3,23 @@
 composer project akeb/services_json
 
 Composer config
-```
+
+```json
 {
-	"require": {
-		"akeb/services_json": "^1.0.0"
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://git.terrhq.ru/v.babajanyan/Services_JSON"
-		}
-	]
+    "require": {
+        "akeb/services_json": "^1.1.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/AKEB/Services_JSON"
+        }
+    ]
 }
 ```
 
 or
 
-```
-{
-	"require": {
-		"akeb/services_json": "^1.0.0"
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/AKEB/Services_JSON"
-		}
-	]
-}
+```bash
+composer require akeb/services_json
 ```

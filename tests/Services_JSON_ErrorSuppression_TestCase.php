@@ -6,7 +6,19 @@ error_reporting(E_ALL);
 
 class Services_JSON_ErrorSuppression_TestCase extends PHPUnit\Framework\TestCase {
 
-	function setUp() {
+	protected $json;
+	protected $json_;
+	protected $res;
+	protected $res_j_;
+	protected $res_d;
+	protected $arr;
+	protected $arr_j_;
+	protected $arr_d;
+	protected $obj;
+	protected $obj_j_ ;
+	protected $obj_d;
+
+	protected function setUp(): void {
 		$this->json = new Services_JSON();
 		$this->json_ = new Services_JSON(SERVICES_JSON_SUPPRESS_ERRORS);
 

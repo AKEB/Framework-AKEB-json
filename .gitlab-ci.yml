@@ -1,32 +1,27 @@
 before_script:
-  - bash ci/docker_install.sh > /dev/null
   - export https_proxy=http://m100.cache.pvt:3128
   - export http_proxy=http://m100.cache.pvt:3128
-  - curl -s http://getcomposer.org/installer | php
   - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
-  - php composer.phar install --prefer-source --no-interaction
+  - composer install --prefer-install=auto --no-interaction
   - phpenv rehash
 
-
-test:7.0:
-  image: php:7.0
-  tags:
-    - myua
-    - docker
-  script:
-    - php vendor/bin/phpunit -c phpunit.xml
-
 test:7.1:
-  image: php:7.1
+  image: babadzhanyan/php-unit:7.1
+  tags:
+    - mrgs
   script:
-    - php vendor/bin/phpunit -c phpunit.xml
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.1.xml
 
 test:7.2:
-  image: php:7.2
+  image: babadzhanyan/php-unit:7.2
+  tags:
+    - mrgs
   script:
-    - php vendor/bin/phpunit -c phpunit.xml
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.2.xml
 
 test:7.3:
-  image: php:7.3
+  image: babadzhanyan/php-unit:7.3
+  tags:
+    - mrgs
   script:
-    - php vendor/bin/phpunit -c phpunit.xml
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.3.xml

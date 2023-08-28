@@ -6,7 +6,19 @@ error_reporting(E_ALL);
 
 class Services_JSON_NestedArray_TestCase extends PHPUnit\Framework\TestCase {
 
-	function setUp() {
+	protected $json;
+	protected $str1;
+	protected $arr1;
+	protected $str2;
+	protected $arr2;
+	protected $str3;
+	protected $arr3;
+	protected $str4;
+	protected $arr4;
+	protected $str5;
+	protected $arr5;
+
+	protected function setUp(): void {
 		$this->json = new Services_JSON(SERVICES_JSON_LOOSE_TYPE);
 
 		$this->str1 = '[{"this":"that"}]';

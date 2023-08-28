@@ -1,39 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/|version|/phpunit.xsd"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.2/phpunit.xsd"
 	backupGlobals="false"
 	backupStaticAttributes="false"
 	bootstrap="./vendor/autoload.php"
 	processIsolation="false"
 	stopOnFailure="false"
-	syntaxCheck="true"
 	colors="true"
 	convertErrorsToExceptions="true"
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
 	verbose="false"
 >
-	<php>
-		<ini name="error_reporting" value="-1" />
-		<ini name="xdebug.mode" value="coverage" />
-		<env name="XDEBUG_MODE" value="coverage" />
-	</php>
 	<testsuites>
 		<testsuite name="Tests">
 			<directory suffix=".php">./tests/</directory>
 		</testsuite>
 	</testsuites>
-	<coverage processUncoveredFiles="true">
-		<include>
-			<directory suffix=".php">src</directory>
-		</include>
-		<report>
-			<clover outputFile="./tests/logs/report/coverage_clover.xml"/>
-		</report>
-	</coverage>
 	<logging>
-		<!-- <log type="coverage-html" target="./tests/logs/report" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound="80"/> -->
 		<log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
 	</logging>
 	<filter>

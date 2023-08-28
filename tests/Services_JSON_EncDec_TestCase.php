@@ -5,7 +5,34 @@ use \AKEB\services_json\Services_JSON;
 error_reporting(E_ALL);
 class Services_JSON_EncDec_TestCase extends PHPUnit\Framework\TestCase {
 
-	function setUp() {
+	protected $json;
+	protected $obj;
+	protected $obj_j;
+	protected $obj_d;
+	protected $arr;
+	protected $arr_j;
+	protected $arr_d;
+
+	Protected $str1;
+	Protected $str1_j;
+	Protected $str1_j_;
+	Protected $str1_d;
+	Protected $str1_d_;
+
+	Protected $str2;
+	Protected $str2_j;
+	Protected $str2_d;
+
+	Protected $str3;
+	Protected $str3_j;
+	Protected $str3_d;
+
+	Protected $str4;
+	Protected $str4_j;
+	Protected $str4_j_;
+	Protected $str4_d;
+
+	protected function setUp(): void {
 		$this->json = new Services_JSON();
 		$obj = new \stdClass();
 		$obj->a_string = '"he":llo}:{world';

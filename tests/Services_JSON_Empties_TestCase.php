@@ -5,7 +5,7 @@ use \AKEB\services_json\Services_JSON;
 error_reporting(E_ALL);
 class Services_JSON_Empties_TestCase extends PHPUnit\Framework\TestCase {
 
-	function setUp() {
+	protected function setUp(): void {
 		$this->json_l = new Services_JSON(SERVICES_JSON_LOOSE_TYPE);
 		$this->json_s = new Services_JSON();
 

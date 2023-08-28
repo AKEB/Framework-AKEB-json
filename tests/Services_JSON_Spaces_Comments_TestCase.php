@@ -6,7 +6,15 @@ error_reporting(E_ALL);
 
 class Services_JSON_Spaces_Comments_TestCase extends PHPUnit\Framework\TestCase {
 
-	function setUp() {
+	protected $json;
+	protected $obj_j;
+	protected $obj_js;
+	protected $obj_jc1;
+	protected $obj_jc2;
+	protected $obj_jc3;
+	protected $obj_jc4;
+
+	protected function setUp(): void {
 		$this->json = new Services_JSON(SERVICES_JSON_LOOSE_TYPE);
 
 		$this->obj_j = '{"a_string":"\"he\":llo}:{world","an_array":[1,2,3],"obj":{"a_number":123}}';
@@ -34,13 +42,11 @@ class Services_JSON_Spaces_Comments_TestCase extends PHPUnit\Framework\TestCase 
 						  "obj": {"a_number":123}}';
 	}
 
-	function test_spaces()
-	{
+	function test_spaces() {
 		$this->assertEquals($this->json->decode($this->obj_j), $this->json->decode($this->obj_js), "checking whether notation with spaces works");
 	}
 
-	function test_comments()
-	{
+	function test_comments() {
 		$this->assertEquals($this->json->decode($this->obj_j), $this->json->decode($this->obj_jc1), "checking whether notation with single line comments works");
 		$this->assertEquals('the sneetch', $this->json->decode($this->obj_jc2), "checking whether notation with multiline comments works");
 		$this->assertEquals($this->json->decode($this->obj_j), $this->json->decode($this->obj_jc3), "checking whether notation with multiline comments works");

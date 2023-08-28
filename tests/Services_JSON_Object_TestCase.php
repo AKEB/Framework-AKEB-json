@@ -4,10 +4,16 @@ use \AKEB\services_json\Services_JSON;
 
 error_reporting(E_ALL);
 
-class Services_JSON_Object_TestCase extends PHPUnit\Framework\TestCase
-{
-	function setUp()
-	{
+class Services_JSON_Object_TestCase extends PHPUnit\Framework\TestCase {
+
+	protected $json_l;
+	protected $json_s;
+	protected $obj_j;
+	protected $obj1;
+	protected $obj1_j;
+	protected $obj1_d;
+
+	protected function setUp(): void {
 		$this->json_l = new Services_JSON(SERVICES_JSON_LOOSE_TYPE);
 		$this->json_s = new Services_JSON();
 
