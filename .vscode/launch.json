@@ -1,0 +1,26 @@
+{
+	// Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+	// Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+	// Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "PHP7.3 in Docker",
+			"type": "f5anything",
+			"request": "launch",
+			"command": "cd \"${workspaceFolder}/\" && \"${workspaceFolder}/dockerRun.sh\" \"7.3\" \"${workspaceFolder}\" \"${file}\""
+		},
+		{
+			"name": "PHP7.2 in Docker",
+			"type": "f5anything",
+			"request": "launch",
+			"command": "cd \"${workspaceFolder}/\" && \"${workspaceFolder}/dockerRun.sh\" \"7.2\" \"${workspaceFolder}\" \"${file}\""
+		},
+		{
+			"name": "PHP7.1 in Docker",
+			"type": "f5anything",
+			"request": "launch",
+			"command": "cd \"${workspaceFolder}/\" && \"${workspaceFolder}/dockerRun.sh\" \"7.1\" \"${workspaceFolder}\" \"${file}\""
+		}
+	]
+}
