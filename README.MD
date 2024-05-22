@@ -12,7 +12,7 @@ Composer config
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/AKEB/Services_JSON"
+            "url": "https://github.com/AKEB/Framework-AKEB-json"
         }
     ]
 }

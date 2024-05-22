@@ -5,22 +5,23 @@ before_script:
   - composer install --prefer-install=auto --no-interaction
 
 test:7.1:
-  image: babadzhanyan/php-unit:7.1
+  image: babadzhanyan/php-fpm:7.1
   tags:
     - mrgs
   script:
-    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.1.xml
+    - XDEBUG_MODE=coverage php7.1 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.1.xml
+
 
 test:7.2:
-  image: babadzhanyan/php-unit:7.2
+  image: babadzhanyan/php-fpm:7.2
   tags:
     - mrgs
   script:
-    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.2.xml
+    - XDEBUG_MODE=coverage php7.2 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.2.xml
 
 test:7.3:
-  image: babadzhanyan/php-unit:7.3
+  image: babadzhanyan/php-fpm:7.3
   tags:
     - mrgs
   script:
-    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.3.xml
+    - XDEBUG_MODE=coverage php7.3 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.3.xml
