@@ -5,7 +5,7 @@ before_script:
   - composer install --prefer-install=auto --no-interaction
 
 test:7.1:
-  image: akeb/php-fpm:7.1
+  image: akeb/php-fpm-7.1:latest
   tags:
     - mrgs
   script:
@@ -13,14 +13,14 @@ test:7.1:
 
 
 test:7.2:
-  image: akeb/php-fpm:7.2
+  image: akeb/php-fpm-7.2:latest
   tags:
     - mrgs
   script:
     - XDEBUG_MODE=coverage php7.2 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.2.xml
 
 test:7.3:
-  image: akeb/php-fpm:7.3
+  image: akeb/php-fpm-7.3:latest
   tags:
     - mrgs
   script:
